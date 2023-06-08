@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600;700&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+
+@mixin light {
+   font-family: 'Roboto Condensed', sans-serif;
+   width: 300;
+
+}
+
+@mixin regular {
+   font-family: 'Roboto Condensed', sans-serif;
+   width: 400;
+
+}
+
+@mixin bold-cond {
+   font-family: 'Roboto Condensed', sans-serif;
+   width: 700;
+
+}
+
+@mixin bold {
+   font-family: 'Raleway', sans-serif;
+   width: 600;
+   
+}
+
+@mixin extrabold {
+   font-family: 'Raleway', sans-serif;
+   width: 700;
+   
+}
+

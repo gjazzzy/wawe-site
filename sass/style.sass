@@ -1,0 +1,803 @@
+// Базовые настройки 
+@import 'reset'
+
+//Шрифты
+@import 'fonts'
+
+// Шапка 
+@import 'global'
+
+.tag
+    display: none
+
+.header
+    z-index: 10
+    color: #fff
+    position: fixed
+    left: 0
+    right: 0
+    padding: 35px 0
+    backdrop-filter: blur(6px)
+
+    &__wrap
+        display: flex
+        gap: 90px
+        align-items: center
+
+    &__menu
+        +regular
+        display: flex
+        gap: 45px
+        font-size: 24px
+        line-height: 28px
+        letter-spacing: 0.6px
+
+    //burger menu
+
+    &__burger-btn
+        border: 0
+        background: transparent
+        display: none
+        width: 48px
+        height: 48px
+
+    &__burger-btn-close
+        border: 0
+        background: transparent
+        width: 48px
+        height: 48px
+        &:hover
+            transform: scale(1.4)
+
+    &__burger-wrap
+        display: none
+
+    &__burger-menu
+        position: fixed
+        z-index: 10
+        top: 0
+        bottom: 0
+        padding-top: 35px
+        width: 100vw
+        height: 100vh
+        right: 0
+        left: 0
+        background: #000000e8
+        backdrop-filter: blur(7px)
+        display: flex
+        flex-direction: column
+        align-items: center
+        overflow-y: scroll
+
+    &__burger-nav
+        margin-top: 50px
+        display: flex
+        align-items: baseline
+        gap: 20px
+        margin-left: 68px
+
+    &__burger-list
+        +regular
+        display: flex
+        flex-direction: column
+        gap: 80px
+        font-size: 20px
+
+    &__item-link
+        color: #fff
+        padding: 10px
+
+.top
+    background-image: url('../image/main-bg.png')
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+    &__title
+        +extrabold
+        color: #0D302C
+        margin: 180px 0 0 0
+        text-align: center
+        font-size: 200px
+        line-height: 235px
+        letter-spacing: 0.6px
+
+    &__suptitle
+        +regular
+        color: #000
+        font-size: 24px
+        line-height: 28px
+
+.about
+    &__texts
+        display: flex
+        text-align: left
+        gap: 120px
+
+    &__text
+        +light
+        color: #242121
+        display: flex
+        flex-direction: column
+        gap: 30px
+
+.get
+    color: #242121
+
+    &__items
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 24px
+        flex-wrap: wrap
+
+    &__item
+        max-width: 330px
+
+    &__item-name
+        text-align: left
+        display: flex
+        align-items: center
+        gap: 10px
+
+    &__item-title
+        +regular
+        font-size: 24px
+        line-height: 28px
+
+    &__item-text
+        +light
+        margin-top: 15px
+        text-align: left
+        font-size: 14px
+        line-height: 18px
+
+    &__discount
+        margin-top: 100px
+        gap: 50px
+        display: flex
+        justify-content: space-between
+
+    &__discount-texts
+        +light
+        text-align: left
+        display: flex
+        flex-direction: column
+        font-size: 14px
+        line-height: 18px
+        max-width: 600px
+        gap: 30px
+
+    &__discount-stats
+        display: flex
+        flex-direction: column
+        align-items: left
+        gap: 30px
+
+    &__discount-stat-item
+        display: flex
+        position: relative
+
+    &__discount-item-per
+        +regular
+        font-size: 24px
+        margin-left: 10px
+        line-height: 18px
+
+    &__discount-item-descr
+        +light
+        font-size: 14px
+        line-height: 18px
+        position: absolute
+        bottom: -20px
+
+.merit
+    &__wrap
+        display: flex
+        align-items: center
+
+    &__title
+        text-align: left
+        font-size: 34px
+
+    &__box-img
+        background-image: url('../image/merit-img.png')
+        background-position: center
+        background-repeat: no-repeat
+        background-size: cover
+        margin-left: 90px
+        overflow: hidden
+        max-width: 960px
+        max-height: 850px
+
+    &__info
+        max-width: 560px
+
+    &__texts
+        +light
+        color: #242121
+        display: flex
+        flex-direction: column
+        text-align: left
+        font-size: 14px
+        line-height: 18px
+        gap: 30px
+        max-width: 507px
+
+.gallery
+    position: relative
+    padding-bottom: 50px
+
+    &__wrap
+        display: flex
+        flex-direction: column
+        gap: 50px
+
+    &__menu
+        +regular
+        font-size: 24px
+        line-height: 18px
+        display: flex
+        gap: 20px
+
+    &__item-link
+        color: #242121
+
+        &:hover
+            color: #00B2A0
+
+    &__photo
+        position: relative
+        display: grid
+        grid-template-columns: repeat(4,1fr)
+        grid-template-rows: repeat(2,1fr)
+        grid-gap: 25px
+
+    &__photo-item
+        height: 280px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &__photo-item:nth-child(1),
+    &__photo-item:nth-child(6)
+        grid-column: span 2
+        grid-row: span 1
+
+    &__wrap-btn
+        display: flex
+        justify-content: center
+
+    &__btn
+        +regular
+        font-size: 24px
+        background: #fff
+        line-height: 18px
+        width: 350px
+        border: #C4C4C4 1px solid
+        height: 70px
+
+.quote
+    background: #f1efef
+    &__title
+        +regular
+        position: relative
+        font-style: italic
+        font-weight: 400
+        font-size: 36px
+        padding: 60px 0
+        &::after
+            content: 'Нэт Янг, первый Чемпион Мира по сёрфингу'
+            +light
+            font-size: 14px
+            line-height: 18px
+            position: absolute
+            bottom: 60px
+            right: 16 0px
+
+// Слайдер
+.slick-slider
+    display: flex
+    min-width: 0 // Всегда вкл
+
+// Ограничивающая оболочка 
+.slick-list
+    overflow: hidden // Всегда вкл
+
+// Лента слайдов 
+.slick-track
+    display: flex // Всегда вкл
+
+.slick-dots
+    display: flex
+    justify-content: center
+    gap: 15px
+    position: absolute
+    bottom: 77px
+    left: 0
+    right: 0
+
+    &,button
+        background: #00B2A0#FFFFFF
+        border-radius: 10px
+        height: 15px
+        width: 15px
+        border: 0
+        font-size: 0px
+
+//vidio
+.vidio
+
+    &__clip
+        background-image: url('../image/vidio.png')
+        background-position: center
+        background-size: cover
+        min-height: 600px
+        display: flex
+        align-items: center
+        justify-content: center
+
+    &__btn
+        border: 0
+        background: transparent
+        cursor: pointer
+
+    &__items
+        margin-top: 100px
+        flex-wrap: wrap
+        display: flex
+        align-items: center
+        justify-content: center
+        gap: 84px
+
+    &__number
+        font-family: Roboto Condensed
+        font-weight: 700
+        color: #01353E
+        font-size: 64px
+        line-height: 75px
+        letter-spacing: 0.6px
+
+    &__text
+        +light
+        font-size: 14px
+        line-height: 18px
+
+// Конкретный слайдер
+.slider
+    position: relative // Всегда вкл
+    padding: 0px 0px// Отступы по бокам
+
+.slider__item
+    background-image: url('../image/Group 6.png')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    color: #fff
+    min-height: 800px
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    justify-content: center
+    text-align: left
+    padding-right: 360px
+
+.slider__title
+    padding-left: 20px
+
+.slider__item-title
+    +regular
+    font-size: 48px
+    line-height: 56px
+    max-width: 600px
+
+.slider__suptitle
+    +light
+    font-size: 14px
+    line-height: 18px
+    letter-spacing: 0.6px
+
+.team
+
+    &__items
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+        gap: 80px
+
+    &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        font-size: 18px
+        line-height: 18px
+        overflow: hidden
+
+    &__item-img
+
+        height: 450px
+        max-width: 330px
+        margin-bottom: 25px
+
+    &__item-name
+        +bold
+
+    &__item-post
+        +light
+
+.services
+
+    &__items
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 60px
+
+    &__item
+        +regular
+        position: relative
+        color: #01353E
+        font-size: 36px
+        line-height: 40px
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+
+    &__item-menu
+        margin-top: 36px
+
+    &__item-list
+        +light
+        margin-top: 20px
+        text-align: left
+        font-size: 14px
+        line-height: 18px
+
+    &__item-price
+        margin-top: 60px
+
+.map
+    &-img
+        width: 80%
+
+.contacts
+    &__wrap
+        display: flex
+        gap: 83px
+        justify-content: center
+        text-align: left
+
+    &__form-wrap
+        display: flex
+        flex-direction: column
+        gap: 32px
+
+    &__form-input
+        +light
+        font-size: 18px
+        line-height: 18px
+        width: 570px
+        padding: 2px 0 18px 0
+        border: 0
+        border-bottom: 2px solid #DADADA
+        &::placeholder
+            color: #00B2A0
+
+    &__form-textarea
+        +regular
+        margin: 53px 0 73px 0
+        font-size: 18px
+        line-height: 18px
+        width: 570px
+        height: 170px
+        resize: none
+        color: #000000
+        border: 0
+        border-bottom: 2px solid #DADADA
+
+        &::placeholder
+            color: #00B2A0
+            width: 260px
+
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 65px
+
+    &__info-item
+        +regular
+        font-size: 24px
+        line-height: 30px
+        max-width: 327px
+
+    &__info-link
+        color: #242424
+
+    &__socials
+        +regular
+        padding: 200px 0 200px
+        display: flex
+        gap: 15px
+        justify-content: center
+        font-size: 24px
+        line-height: 18px
+
+    &__social-link
+        color: #242121
+        &:hover
+            color: #00B2A0
+
+.footer
+    background: #00B2A0
+
+    &__wrap
+        align-items: center
+        display: flex
+        justify-content: center
+        padding: 68px 0px
+
+@media screen and (max-width: 1215px)
+    .gallery
+        &__photo
+            position: relative
+            display: flex
+            flex-wrap: wrap
+            grid-gap: 35px
+            overflow: hidden
+            justify-content: center
+
+    .team
+
+        &__items
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-wrap: wrap
+            gap: 80px
+
+@media screen and (max-width:1095px)
+    //get
+    .get
+
+        &__items
+            gap: 40px 24px
+            justify-content: start
+            align-items: flex-start
+
+        &__discount
+            align-items: center
+
+    //merit
+    .merit
+        &__box-img
+            display: none
+
+        &__info
+            max-width: 1095px
+
+        &__texts
+            max-width: 1095px
+
+    //SLIDER
+
+    .slider__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        text-align: center
+        padding-right: 0px
+
+    .slider__item-title
+        +regular
+        font-size: 25px
+        line-height: 56px
+        max-width: 600px
+
+    .slider__suptitle
+        +light
+        font-size: 14px
+        line-height: 18px
+        letter-spacing: 0.6px
+
+@media screen and (max-width:950px)
+
+    section
+        padding: 87px 0 50px
+
+    .header
+        padding: 10px 0
+
+        &__wrap
+            justify-content: space-between
+            gap: 0px
+
+        &__menu
+            gap: 20px
+            font-size: 20px
+
+    //servise
+    .services
+
+        &__items
+            justify-content: center
+
+@media screen and (max-width:880px)
+    //contacts
+    .contacts
+        &__wrap
+            flex-direction: column
+
+        &__form-input
+            font-size: 16px
+            max-width: 570px
+            width: 100%
+
+        &__form-textarea
+            font-size: 16px
+            max-width: 570px
+            width: 100%
+            color: #000000
+            border-bottom: 2px solid #DADADA
+
+        &__info
+            gap: 20px
+
+        &__info-item
+            font-size: 18px
+
+    //map
+    .map
+        &-img
+            width: 100%
+            margin: 0 auto
+
+@media screen and (max-width:730px)
+    .title
+        font-size: 25px
+        margin: 50px 20px 50px 0
+        text-align: left
+        line-height: 36px
+
+    //top
+    .top
+
+        &__title
+            margin: 80px 0 0 0
+            font-size: 150px
+    //about
+    .about
+        &__texts
+            display: flex
+            text-align: left
+            gap: 50px
+
+        &__text
+            gap: 30px
+    //get
+    .get
+
+        &__discount
+            margin-top: 100px
+            gap: 50px
+            flex-direction: column
+            align-items: center
+            align-items: flex-start
+
+        &__item
+            max-width: 740px
+
+        &__item-title
+            font-size: 16px
+
+    //quote
+    .quote
+        display: none
+
+@media screen and (max-width:630px)
+
+    .button
+        cursor: pointer
+        font-size: 18px
+        background: #fff
+        line-height: 18px
+        max-width: 350px
+        border: #C4C4C4 1px solid
+        height: 40px
+
+    //header
+    .header
+        padding: 10px 0
+
+        &__wrap
+            justify-content: space-between
+            gap: 0px
+
+        &__nav
+            display: none
+
+        &__menu
+            gap: 20px
+            font-size: 20px
+
+        &__burger-btn
+            display: block
+
+    //top
+    .top
+        &__title
+            margin: 70px 0 0 0
+            font-size: 120px
+            line-height: 135px
+            letter-spacing: 0.6px
+
+        &__suptitle
+            margin-top: 30px
+            font-size: 20px
+
+    //gallery
+    .gallery
+
+        &__menu
+            font-size: 18px
+            flex-wrap: wrap
+        &__photo
+            grid-gap: 10px
+
+@media screen and (max-width:440px)
+    //top
+    .container
+        padding: 0 10px
+
+    .top
+        &__title
+            margin: 70px 0 0 0
+            font-size: 60px
+            line-height: 90px
+            letter-spacing: 0.6px
+
+        &__suptitle
+            margin-top: 30px
+            font-size: 18px
+            line-height: 20px
+
+    //get
+    .get
+
+        &__items
+            gap: 40px 0px
+            justify-content: space-between
+
+@media screen and (max-width:400px)
+    .title
+        font-size: 20px
+        margin: 50px 20px 50px 0
+        text-align: left
+        line-height: 32px
+    //about
+    .about
+        &__texts
+            flex-direction: column
+            gap: 30px
+
+        &__text
+            gap: 30px
+
+    //contacts
+    .contacts
+
+        &__form-btn
+            max-width: 200px
+        &__socials
+            flex-direction: column
+            gap: 40px
+            padding: 100px 0
+
+@media screen and (max-width:370px)
+    //get
+    .get
+
+        &__discount-stats
+            display: none
